@@ -67,13 +67,12 @@ index = 0
 frac_po = [12,10,10,10] #fraction positions of CNN network 
 
 
-hw_npy= "/media/sf_SVN/bias_add/new_xml_12_10_10_10/with_bias/new_out_image0_16bit/output_sim/4/hw_npy"
-caffe_npy = '/media/sf_SVN/bias_add/caffe_result_studpid_8channels/caffe_numpy/' # caffe output results of all layer in numpy format
+hw_npy= '' # path to save haware results in numpy format 
+caffe_npy = '' # caffe output results of all layer in numpy format
 
-rms_std_mean='/media/sf_SVN/inkalll/exel_png out _from_script/RMS.xlsx'
-rms_value_each_layer=  '/media/sf_SVN/inkalll/exel_png out _from_script/test.xlsx'
-combi_each_rms_max_min= '/media/sf_SVN/inkalll/exel_png out _from_script/each_ch.xlsx'
-each_layer_csv= "/media/sf_SVN/bias_add/new_xml_12_10_10_10/with_bias/new_out_image0_16bit/output_sim/4/csv" # SIL or HIL output results for all layer as a inputs
+rms_std_mean='' # path of exel file to save result of RMS , Mean and stanard deviation in .xlsx format 
+rms_value_each_layer= '' # path of exel file to save result of RMS , Mean and stanard deviation in .xlsx format 
+each_layer_csv= " " # SIL or HIL output results for all layer as a inputs
 
 folder_csv = os.listdir (each_layer_csv)
 cwd = os.getcwd()
