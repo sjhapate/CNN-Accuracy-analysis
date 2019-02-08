@@ -75,10 +75,10 @@ rms_value_each_layer=  '/media/sf_SVN/inkalll/exel_png out _from_script/test.xls
 combi_each_rms_max_min= '/media/sf_SVN/inkalll/exel_png out _from_script/each_ch.xlsx'
 each_layer_csv= "/media/sf_SVN/bias_add/new_xml_12_10_10_10/with_bias/new_out_image0_16bit/output_sim/4/csv" # SIL or HIL output results for all layer as a inputs
 
-filenames = os.listdir (each_layer_csv)
+folder_csv = os.listdir (each_layer_csv)
 cwd = os.getcwd()
-print "filenames ________________",filenames
-for filename in filenames:
+print "folder_csv ________________",folder_csv
+for filename in folder_csv:
     newlist = []
     del file_name [:]
     del firstfile [:]
@@ -122,7 +122,7 @@ for filename in filenames:
     newlist = np.asarray(newlist).reshape(1,len(file_name),len(firstfile[0]),len(firstfile[0]))
     # to create npy files from eacy layer 
     
-    for t in range(len(filenames)):
+    for t in range(len(folder_csv)):
         if not os.path.exists(hw_npy):
             os.makedirs(hw_npy)
         layer_file = os.path.join(hw_npy ,filename)
